@@ -1,0 +1,36 @@
+/*中间一条线*/
+.tm-main {
+    border-left: 1px solid #e5e5e5;
+    padding-left: 50px !important;
+}
+
+/*字体你懂*/
+body, h1, h2, h3, h4, h5, h6, .uk-navbar-nav > li > a {
+    font-family: "Proxima Nova","Helvetica Neue",Helvetica,"PingFang SC","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+/*子标题左边有蓝色的边边*/
+.tm-article-subtitle {
+    border-left: 3px solid #1fa2d6;
+    font-size: 16px;
+    line-height: 16px;
+    padding-left: 6px;
+}
+
+/*正文离标题远一点(根据不同的屏幕宽度),然后给点颜色看看*/
+.tm-middle {
+    background: #fff none repeat scroll 0 0;
+}
+.tm-middle, .tm-section, .tm-footer {
+    padding: 50px 0;
+}
+@media (min-width: 768px) {
+    .tm-middle, .tm-section, .tm-footer {
+        padding: 90px 0;
+    }
+}
+@media (min-width: 1220px) {
+    .tm-middle, .tm-section, .tm-footer {
+        padding: 120px 0;
+    }
+}

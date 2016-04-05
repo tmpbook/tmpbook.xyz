@@ -65,3 +65,4 @@ target/
 .idea
 front-end
 db.*
+.DS_Store

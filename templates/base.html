@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Title{% endblock %}</title>
+	<link rel="stylesheet" href={% static "css/uikit.min.css" %} />
+	<link rel="stylesheet" href={% static "css/docs.css" %} />
     {% block css %}
     {% endblock %}
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    {% include "nav.html" %}
+    <div class="tm-middle">
+        {% block content %}
+        {% endblock %}
+    </div>
 
+	<script type="text/javascript" src={% static "js/jquery-1.11.2.js" %}></script>
+	<script type="text/javascript" src={% static "js/uikit.min.js" %}></script>
     {% block js %}
     {% endblock %}
 </body>

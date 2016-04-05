@@ -6,19 +6,37 @@
 {% block css %}
 	<!-- codemirror CSS -->
 	<link rel="stylesheet" href={% static "css/codemirror.css" %} />
+    <!-- codemirror css theme -->
+	<link rel="stylesheet" href={% static "css/blackboard.css" %} />
 {% endblock %}
 
 {% block content %}
-    demo
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <div class="uk-width-medium-1-4">
+            </div>
+            <div class="tm-main uk-width-medium-3-4">
+                <h1 class="uk-article-title">在线编辑器</h1>
+                <h3 class="tm-article-subtitle">Python</h3>
+                <textarea id="editor" name="editor"></textarea>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block js %}
 	<script type="text/javascript" src={% static "js/codemirror.js" %}></script>
 	<script type="text/javascript" src={% static "js/python.js" %}></script>
     <script>
-    var myCodeMirror = CodeMirror(document.body, {
-        lineNumbers: true
-        
+    var python_editor = document.getElementById('editor');
+        var myCodeMirror = CodeMirror.fromTextArea(python_editor, {
+            lineNumbers: true,
+            theme: "blackboard"
+        });
+    </script>
+    <script>
+    $(window).bind('beforeunload',function(){
+        return '您输入的内容尚未保存，确定离开此页面吗？';
     });
     </script>
 {% endblock %}
