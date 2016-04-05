@@ -1,3 +1,14 @@
+/*do not know*/
+html {
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: scroll;
+}
+
+/*背景颜色为黑*/
+.tm-background {
+    background: #252525 none repeat scroll 0 0;
+}
+
 /*中间一条线*/
 .tm-main {
     border-left: 1px solid #e5e5e5;

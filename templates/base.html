@@ -12,8 +12,10 @@
 <body>
     {% include "nav.html" %}
     <div class="tm-middle">
-        {% block content %}
-        {% endblock %}
+        <div class="uk-container uk-container-center">
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
 
 	<script type="text/javascript" src={% static "js/jquery-1.11.2.js" %}></script>

@@ -4,7 +4,7 @@
             <img width="90" height="30" alt="tmpbook" title="tmpbook" src="" class="uk-margin uk-margin-remove">
         </a>
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="">代码</a></li>
+            <li class="{% if 'codemirror' in current_page %}uk-active{% endif %}"><a href="{% url "codemirror:index" %}">高亮编辑器</a></li>
             <li><a href="">博客</a></li>
             <li class="uk-parent"><a href="">关于</a></li>
         </ul>
