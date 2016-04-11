@@ -17,7 +17,7 @@ html {
 
 /*字体你懂*/
 body, h1, h2, h3, h4, h5, h6, .uk-navbar-nav > li > a {
-    font-family: "Proxima Nova","Helvetica Neue",Helvetica,"PingFang SC","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-family: "noto-thin", "Proxima Nova","Helvetica Neue",Helvetica,"PingFang SC","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
 
 /*子标题左边有蓝色的边边*/

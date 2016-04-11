@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^adm1n/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name="home.html")),
     url(r'^codemirror/', include("codemirror.urls", namespace="codemirror")),
+    url(r'^d3/', include("d3.urls", namespace='d3')),
 ]

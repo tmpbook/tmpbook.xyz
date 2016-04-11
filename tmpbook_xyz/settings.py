@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import mongoengine
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'codemirror',
+    'd3',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -76,10 +78,10 @@ WSGI_APPLICATION = 'tmpbook_xyz.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': '',
     }
 }
 
@@ -125,3 +127,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+_MONGODB_USER = ''
+_MONGODB_PASSWD = ''
+_MONGODB_HOST = '192.168.8.170'
+_MONGODB_NAME = 'kevin'
+_MONGODB_DATABASE_HOST = \
+    'mongodb://%s/%s' \
+    % (_MONGODB_HOST, _MONGODB_NAME)
+mongoengine.connect(_MONGODB_NAME, host=_MONGODB_DATABASE_HOST)
+
